@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- Подключаем будстрап локально -->
+    <link href="bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="css/style.css" rel="stylesheet" >
+
+
+    <title>Сайт туристической компании</title>
+  </head>
+
+  <!-- Используем стиль body-top по умолчанию для всего документа -->
+  <body class = "body-top">
+
+    <!-- Создаём блок для области заголовка -->
+    <header class = "container">
+      <!-- Создаём новую горизонтальную область(строку) -->
+      <div class = "row">
+        <!-- Внутри горизонтальной области определяем первую колонку шириной 3/12 -->
+        <div class = "col-3">
+          <!-- Внутри выводим логотип -->
+          <img id = "logo" src = "img/logo.jpg">
+          <!-- Завершаем первый столбец -->
+        </div>
+        <!-- Внутри горизонтальной области определяем вторую колонку, шириной  9/12 -->
+        <div class = "col-9">
+          <!-- Внутри выводим название -->
+          <h1>Путешествуй с нами!</h1>
+          <!-- Завершаем второй столбец -->
+        </div>
+        <!-- Завершаем строку -->
+      </div>
+      <!-- Завершаем описание области заголовка -->
+    </header>
+
+    <!-- Обёртка для меню -->
+    <div id = "menu">
+      <!-- Начало flex-меню -->
+      <nav class = "nav nav-pills flex-column flex-sm-row">
+        <!-- Ссылка на главную страницу -->
+        <a class="flex-sm-fill text-sm-center nav-link" href="index.html">Главная</a>
+        <!-- Ссылка на страницу с информацией о турах -->
+        <a class="flex-sm-fill text-sm-center nav-link" href="tours.html">Туры</a>
+        <!-- Ссылка на страницу с контактами -->
+        <a class="flex-sm-fill text-sm-center nav-link" href="contacts.html">О нас</a>
+      </nav>
+    </div>
+
+    <!-- Начало всего блока с содержимым -->
+    <main class = "flex">
+      <!-- Начало первой строки в этом блоке -->
+      <div class = "row">
+        <!-- Начало единственной колонки в первой строке -->
+        <div class = "col">
+          Наши акции
+        </div>
+      </div>
+
+      <!-- Начало второй строки в этом блоке -->
+      <div class = "row">
+        <!-- Начало вервой колонки во второй строке -->
+        <div class = "col">
+          <!-- Создаём ещё один блок, который объединит картинку и ссылку в этой колонке -->
+          <div class = "tour_index">
+            <!-- Выводим картинку -->
+            <img src = "img/crimea.jpg">
+            <p>
+              <!-- С новой строки выводим ссылку -->
+              <a class = "actia" href = "#">Подробнее об акции</a>
+            </p>
+            <!-- Закрываем блок с картинкой и ссылкой -->
+          </div>
+          <!-- Закрываем колонку -->
+        </div>
+
+        <!-- Аналогично описываем ещё две колонки в пределах второй строки -->
+        <div class = "col">
+          <div class = "tour_index">
+            <img src = "img/kavkaz.jpg">
+            <p>
+              <a class = "actia" href = "#">Подробнее об акции</a>
+            </p>
+          </div>
+        </div>
+
+        <div class = "col">
+          <div class = "tour_index">
+            <img src = "img/altay.jpg">
+            <p>
+              <a class = "actia" href = "#">Подробнее об акции</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="row">
+        <div class="col">
+          Это сайт, предназначенный для обучения
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Подключаем библиотеки JavaScript локально-->
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

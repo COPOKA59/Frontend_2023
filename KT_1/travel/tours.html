@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- Подключаем будстрап локально -->
+    <link href="bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="css/style.css" rel="stylesheet" >
+
+
+    <title>Сайт туристической компании</title>
+  </head>
+
+  <!-- Используем стиль body-top по умолчанию для всего документа -->
+  <body class = "body-top">
+    <!-- Model -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!-- Начало описания модального окна bootstrap -->
+          <div class="modal-body" style="max-width: 600px;">
+            <!-- Начало формы -->
+              <form method="get" action="#" id="orderForm">
+                <!-- Далее в блоках класса tour(для того, чтобы к ним были применены те же формы, 
+                  что и на основной странице сайта) описываются поля формы для ввода данных. -->
+                  <div class="tour">
+                      <label class="label" for="name">
+                          Выберите тур:
+                      </label>
+                      <!-- id формы(orderForm) будет использоваться в скрипте обработки формы, 
+                        расматриеваемой ниже -->
+                      <select id="inp1">
+                          <option value="Крым" selected>Крым</option>
+                          <option value="Кавказ" selected>Кавказ</option>
+                          <option value="Алтай" selected>Алтай</option>
+                      </select>
+                  </div>
+                      
+                  <div class="tour">
+                      <label class="label" for="date">
+                          Выберите дату начала:
+                      </label>
+                      <input type="date" id="inp2">
+                  </div>
+
+                  <div class="tour">
+                      <label class="label" for="number">
+                          Выберите количество участников:
+                      </label>
+                      <select id="inp3">
+                          <option value="1" selected>1</option>
+                          <option value="2" selected>2</option>
+                          <option value="3" selected>3</option>
+                          <option value="4" selected>4</option>
+                      </select>
+                  </div>
+
+                  <div class="tour">
+                      <label class="label" for="email">
+                          Ваш E-mail:
+                      </label>
+                      <input type="email" id="inp4" class="input-xlarge"
+                          style="width: 350px;" required="required">
+                  </div>
+
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary" 
+                    id="submit">Отправить</button>
+
+                  <!-- Обратите внимание! 
+                    Для упрощения обработки, перенесите кнопки управления Закрыть и Отправить
+                     из футера модального окна в форму. Футер модального окна можно при этом удалить -->
+                  <!--
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                  <button type="submit" class="btn btn-primary" 
+                  id="submit">Отправить</button>
+                  -->
+
+              </form>
+          </div>
+
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary">Отправить</button>
+          </div> -->
+          
+        </div>
+      </div>
+    </div>
+    <!-- Создаём блок для области заголовка -->
+    <header class = "container">
+      <!-- Создаём новую горизонтальную область(строку) -->
+      <div class = "row">
+        <!-- Внутри горизонтальной области определяем первую колонку шириной 3/12 -->
+        <div class = "col-3">
+          <!-- Внутри выводим логотип -->
+          <img id = "logo" src = "img/logo.jpg">
+          <!-- Завершаем первый столбец -->
+        </div>
+        <!-- Внутри горизонтальной области определяем вторую колонку, шириной  9/12 -->
+        <div class = "col-9">
+          <!-- Внутри выводим название -->
+          <h1>Путешествуй с нами!</h1>
+          <!-- Завершаем второй столбец -->
+        </div>
+        <!-- Завершаем строку -->
+      </div>
+      <!-- Завершаем описание области заголовка -->
+    </header>
+
+    <!-- Обёртка для меню -->
+    <div id = "menu">
+      <!-- Начало flex-меню -->
+      <nav class = "nav nav-pills flex-column flex-sm-row">
+        <!-- Ссылка на главную страницу -->
+        <a class="flex-sm-fill text-sm-center nav-link" href="index.html">Главная</a>
+        <!-- Ссылка на страницу с информацией о турах -->
+        <a class="flex-sm-fill text-sm-center nav-link" href="tours.html">Туры</a>
+        <!-- Ссылка на страницу с контактами -->
+        <a class="flex-sm-fill text-sm-center nav-link" href="contacts.html">О нас</a>
+      </nav>
+    </div>
+
+    <!-- Начало всего блока с содержимым -->
+    <main class = "flex">
+      <!-- Начало первой строки в этом блоке -->
+      <div class = "row">
+        <!-- Начало единственной колонки в первой строке -->
+        <div class = "col">
+          Наши Туры
+        </div>
+      </div>
+
+      <div class = "container-fluid">
+        <!-- Начало второй строки в этом блоке -->
+        <div class = "row">
+          <!-- Начало вервой колонки во второй строке -->
+          <div class = "col">
+            <!-- Создаём ещё один блок, который объединит картинку и ссылку в этой колонке -->
+            <div class = "tour">
+              <!-- Выводим картинку -->
+              <img src = "img/crimea.jpg" class = "tour_img">
+              <p>
+                Это прекрасная возможность отдохнуть всей семьей
+              </p>
+              <!-- Код компонента кнопки вызова модального окна bootstrap
+              со стороны https://getbootstrap.com/docs/4.4/components/modal/. 
+              Значение data-target задайте своё! -->
+              <button type="button" class="btn btn-primary"
+                            data-bs-toggle="modal" data-bs-target="#myModal">
+                        Рассчитать стоимость
+                        </button>
+            </div>
+            <!-- Закрываем колонку -->
+          </div>
+        </div>
+
+        <!-- Аналогично описываем ещё две колонки в пределах второй строки -->
+        <div class = "row">
+          <div class = "col">
+            <div class = "tour">
+              <img src = "img/kavkaz.jpg" class = "tour_img">
+              <p>
+                Море, солнце и горы!
+              </p>
+              <button type="button" class="btn btn-primary"
+                            data-bs-toggle="modal" data-bs-target="#myModal">
+                        Рассчитать стоимость
+                        </button>
+            </div>
+          </div>
+        </div>
+
+        <div class = "row">
+          <div class = "col">
+            <div class = "tour">
+              <img src = "img/altay.jpg" class = "tour_img">
+              <p>
+                Незабываемые впечатления!
+              </p>
+              <button type="button" class="btn btn-primary"
+                            data-bs-toggle="modal" data-bs-target="#myModal">
+                        Рассчитать стоимость
+                        </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="row">
+        <div class="col">
+          Это сайт, предназначенный для обучения
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Подключаем библиотеки JavaScript локально-->
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="jquery/jquery.min.js"></script>
+    <!-- JQuery позволяет обращаться прямо к индентификатору формы.
+      По событию связанному со срабатыванием кнопки submit на форме,
+      выполняется следующая функция -->
+    <script>
+        $('#orderForm').on('submit', function ()
+        {
+            let tour = $("#inp1").val()
+            let date = new Date($("#inp2").val())
+            let month = date.getMonth()
+            let number = $("#inp3").val()
+            number = Number(number)
+            let email = $("#inp4").val()
+
+            let price = 0
+            console.log(`month = ${month}`)
+            if (tour == 'Крым') {
+                if ((month == 4) || (month == 5) || (month == 6) || (month == 7)) {price = number*500}
+                else {price = number*300}
+            }
+            if (tour == 'Кавказ') {
+                if ((month == 11) || (month == 0) || (month == 1) || (month == 4) || 
+                (month == 5) || (month == 6) || (month == 7)) {price = number*300}
+                else {price = number*250}
+            }
+            if (tour == 'Алтай') {
+                price = number*1000
+            }
+
+            alert (`Примерная стоимость вашего тура на ${number} человек составит ${price} у.е. Мы свяжемся с вами!`)
+        }
+        )
+    </script>
+  </body>
+</html>

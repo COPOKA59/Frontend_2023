@@ -1,0 +1,153 @@
+/* Страница занимает 100% экрана по высоте */
+html {
+    height: 100%;
+}
+
+/* Тело документа имеет относительное позиционирование, 
+но отступ для тела документа снизу больше или равен высоте футера */
+body {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 70px;
+}
+
+.footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    color: #ffffff;
+    background-color: #007196;
+}
+
+/* Оформление содержимого всей страницы по умолчанию скопировано с предыдущей версии сайта */
+/*  */
+/*  */
+/*  */
+/* Новые стили */
+.body-top{
+    width: 80%;
+    border: none;
+    margin: auto;
+    font-family: Verdana;
+    font-style: normal;
+    font-size: normal;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Оформление содержимого всего блока заголовка */
+header{
+    padding: 1em;
+    color: #ffffff;
+    background-color: #007196;
+    vertical-align: center;
+}
+
+/* Размер логотипа для средних и больших экранов */
+#logo {
+    max-width: 180px;
+    max-height: 140px;
+}
+
+/* "Плавающее" в зависимости от изменения экрана название */
+.col-9 {
+    display: flex;
+}
+
+/* Заголовок в плавающем окне по центру */
+h1{
+    margin: auto;
+}
+
+/* МЕДИА-ЗАПРОС позволяет сделать размер логотипа и названия меншими 
+при изменении размера окна до размера мобильного устройства */
+@media screen and (max-width: 768px)
+{
+    #logo{
+        max-width: 100px;
+        max-height: 70px;
+    }
+    h1 {
+        font-size: 14px;    
+    }
+}
+
+#menu {
+    /* Фон всего меню */
+    background-color: #66CDAA;
+}
+
+#menu a {
+    /*Цвет и рамка каждого пункта меню*/
+    color: #ffffff;
+    border: solid #ffffff;
+    box-shadow: 20px 0 20px -20px #000 inset, -20px 0 20px -20px #000 inset;
+}
+
+/*  */
+/* Для класса tour, которй объединяет картинку и ссылку */
+.tour {
+    border: solid #007196;
+
+    margin: auto;
+    height: 100%;
+    /* Установили возможность использования технологии flex */
+    display: flex;
+    /* Указали направление расположения внутренних элементов - по строке(row), 
+    и одновременно задали возможность  для них переноситься на другую строку при уменьшении экрана */
+    flex-flow: row wrap;
+}
+.tour_index{
+    border: solid #007196;
+}
+
+/* Для картинок, но только входящих в блок класса tour */
+.tour img, .tour_index img {
+    width: 170px; /* Здесь было изначально значение 250*/
+    height: 170px;
+    padding: 5px;
+}
+
+/* Для ссылок, но только входящих в блок класса tour */
+.tour a, .tour_index a {
+    background-color: #66CDAA;
+    box-shadow: 20px 0 20px -20px #000 inset, -20px 0 20px -20px #000 inset;
+    color: #ffffff;
+}
+
+.tour p .tour img {
+    margin: 0 10px;
+}
+
+#tours{
+    text-align: left;
+}
+table#tours{
+    width: 80%;
+    margin: auto;
+}
+
+table#tours td{
+    text-align: left;
+    border: 2px solid red;
+}
+
+table#form{
+    width: 80%;
+    margin: auto;
+}
+
+table#form td{
+    text-align: center;
+    border: 2px solid red;
+}
+
+.btn {
+    margin-left: auto;
+    order:999;
+    background-color: #66CDAA;
+    box-shadow: 20px 0 20px -20px #000 inset, -20px 0 20px -20px #000 inset;
+    color: #ffffff;
+}
